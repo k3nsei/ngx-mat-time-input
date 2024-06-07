@@ -1,0 +1,14 @@
+<input
+  matInput
+  timeInputBehaviour
+  type="text"
+  inputmode="text"
+  pattern="([0-1][0-9]|2[0-3]):[0-5][0-9]"
+  [id]="id()"
+  [name]="name()"
+  [placeholder]="placeholder()"
+  [readonly]="readonly()"
+  [required]="isRequired()"
+  [tabindex]="tabindex()"
+  [errorStateMatcher]="$any(errorStateMatcher())"
+  [formControl]="$any(ngControl?.control)" />

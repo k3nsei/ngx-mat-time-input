@@ -1,0 +1,34 @@
+@use '@angular/material' as mat;
+@use './styles/theme' as *;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+
+  @include mat.core-theme($light-theme);
+  @include mat.icon-theme($light-theme);
+  @include mat.form-field-theme($light-theme);
+  @include mat.input-theme($light-theme);
+
+  @media (prefers-color-scheme: dark) {
+    @include mat.core-color($dark-theme);
+    @include mat.icon-color($dark-theme);
+    @include mat.form-field-color($dark-theme);
+    @include mat.input-color($dark-theme);
+  }
+}

@@ -1,0 +1,7 @@
+/.angular
+/.husky/_
+/.nx
+/dist
+/out-tsc
+/tmp
+/coverage

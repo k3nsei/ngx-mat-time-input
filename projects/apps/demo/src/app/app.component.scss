@@ -1,0 +1,11 @@
+:host {
+  inline-size: 100%;
+  min-block-size: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15.5rem);
+  grid-template-rows: repeat(auto-fit, 6rem);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}

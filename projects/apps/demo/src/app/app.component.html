@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Time</mat-label>
+    <mat-icon matSuffix fontIcon="schedule" />
+
+    <mat-time-input name="time" formControlName="time" />
+
+    @if (form.controls.time.invalid && form.controls.time.hasError('pattern')) {
+      <mat-error>Invalid time format</mat-error>
+    }
+  </mat-form-field>
+
+  <div>Current value: {{ form.controls.time.value }}</div>
+</form>
+
+<div>
+  <mat-form-field>
+    <mat-label>Time2</mat-label>
+    <mat-icon matSuffix fontIcon="schedule" />
+
+    <mat-time-input name="time2" disabled [(ngModel)]="time2" />
+  </mat-form-field>
+
+  <div>Current value: {{ time2() }}</div>
+</div>
